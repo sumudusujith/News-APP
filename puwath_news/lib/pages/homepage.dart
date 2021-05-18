@@ -14,7 +14,9 @@ class _State extends State<HomePage> {
         title:Text('PUWATH-NEWS'),
       ),
       body:Container(
-        child:ListView.builder(itembuilder:(context,)),
+        child:ListView.builder(itemBuilder:(context,index){
+          
+        }),
       body:Container(),
       
     );
