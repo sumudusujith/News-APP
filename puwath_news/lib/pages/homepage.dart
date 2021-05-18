@@ -15,12 +15,13 @@ class _State extends State<HomePage> {
       ),
       body:Container(
         child:ListView.builder(itemBuilder:(context,index){
-          
+          return Container(
+            height:100,
+            color:Colors.red,
+          );
         }),
-      body:Container(),
-      
+      ),
     );
-      
     
   }
 }
