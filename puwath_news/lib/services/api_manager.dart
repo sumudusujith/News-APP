@@ -7,7 +7,7 @@ class API_Manager {
     var response = await client.get(Strings.news_url);
     if (response.statusCode == 200) {
       var jsonString = response.body;
-      
+
     }
   }
 }
