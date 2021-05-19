@@ -2,25 +2,27 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:puwath_news/constants/strings.dart';
-import 'package:puwath_news/models/newsinfo.dart';
 
+
+
+import 'package:puwath_news/models/newsinfo.dart';
 class API_Manager {
-  Future<NewsModel> getNews() async {
-    var client = http.Client();
-    var newsModel = null;
+  Future<Welcome> getNews() async {
+    var Client = http.Client();
+    var newsWelcom = null;
 
     try {
-      var response = await client.get(Strings.news_url);
+      
+      var response = await Client.get(Strings.news_url);
       if (response.statusCode == 200) {
         var jsonString = response.body;
-        var jsonMap = json.decode(jsonString);
 
-        newsModel = NewsModel.fromJson(jsonMap);
+        var jsonMap = jsonDecode(jsonString);
+        newsWelcom = Welcome.fromJson(jsonMap);
       }
     } catch (Exception) {
-      return newsModel;
+      return newsWelcom;
     }
-    return newsModel;
+    return newsWelcom;
   }
 }
-
