@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:puwath_news/models/newsinfo.dart';
 import 'package:puwath_news/services/api_manager.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -48,26 +49,30 @@ class _HomePageState extends State<HomePage> {
                                     fit: BoxFit.cover,
                                   )),
                             ),
-                            SizedBox(width: 16,),
+                            SizedBox(
+                              width: 16,
+                            ),
                             Flexible(
-                            
-                            child:Column(
+                                child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                              
-
-                              Text(articles.title,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-                              ),
-
-                              Text(articles.description,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,)
-
-                            ],)
-                            //Image.network(articles.urlToImage),
-                             ) ],
+                                Text(
+                                  articles.title,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  articles.description,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                )
+                              ],
+                            )
+                                //Image.network(articles.urlToImage),
+                                )
+                          ],
                         ),
                       );
                     });
