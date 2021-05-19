@@ -23,3 +23,4 @@ class API_Manager {
     return newsModel;
   }
 }
+
